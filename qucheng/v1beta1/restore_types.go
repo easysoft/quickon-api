@@ -43,6 +43,7 @@ type RestoreStatus struct {
 }
 
 //+genclient
+//+kubebuilder:printcolumn:name="Status",type="string",JSONPath=".status.phase",description="Restore status such as New/InProgress"
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
 

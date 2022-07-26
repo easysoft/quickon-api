@@ -48,6 +48,7 @@ type DbRestoreStatus struct {
 }
 
 //+genclient
+//+kubebuilder:printcolumn:name="Status",type="string",JSONPath=".status.phase",description="DbRestore status such as New/InProgress"
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
 

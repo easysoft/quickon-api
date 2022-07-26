@@ -53,6 +53,7 @@ type DbRef struct {
 }
 
 //+genclient
+//+kubebuilder:printcolumn:name="Status",type="string",JSONPath=".status.phase",description="Backup status such as New/InProgress"
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
 

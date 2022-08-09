@@ -41,6 +41,7 @@ type DbServiceStatus struct {
 	Network bool   `json:"network" yaml:"network"`
 	Auth    bool   `json:"auth" yaml:"auth"`
 	Ready   bool   `json:"ready" yaml:"ready"`
+	Global  bool   `json:"global" yaml:"global"`
 	ChildDB int64  `json:"child,omitempty" yaml:"child,omitempty"`
 }
 
@@ -50,6 +51,7 @@ type DbServiceStatus struct {
 //+kubebuilder:printcolumn:name="Network",type=boolean,JSONPath=`.status.network`
 //+kubebuilder:printcolumn:name="Auth",type=boolean,JSONPath=`.status.auth`
 //+kubebuilder:printcolumn:name="Ready",type=boolean,JSONPath=`.status.ready`
+//+kubebuilder:printcolumn:name="Global",type=boolean,JSONPath=`.status.global`
 //+kubebuilder:printcolumn:name="Address",type=string,JSONPath=`.status.address`
 //+kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
 //+kubebuilder:resource:path=dbservices,shortName=dbsvc

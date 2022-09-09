@@ -24,12 +24,20 @@ import (
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
 // DbSpec defines the desired state of Db
+type DbReclaimPolicy string
+
+const (
+	DbReclaimRecycle DbReclaimPolicy = "Recycle"
+	DbReclaimDelete  DbReclaimPolicy = "Delete"
+	DbReclaimRetain  DbReclaimPolicy = "Retain"
+)
 
 type DbSpec struct {
 	DbName        string            `json:"dbName,omitempty"`
 	TargetService Service           `json:"targetService"`
 	Account       Account           `json:"account,omitempty"`
 	Config        map[string]string `json:"config,omitempty"`
+	ReclaimPolicy *DbReclaimPolicy  `json:"reclaimPolicy,omitempty"`
 }
 
 // DbStatus defines the observed state of Db
@@ -37,9 +45,9 @@ type DbStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 	Address string `json:"address,omitempty" yaml:"address,omitempty"`
-	Network bool   `json:"network" yaml:"network"`
-	Auth    bool   `json:"auth" yaml:"auth"`
-	Ready   bool   `json:"ready" yaml:"ready"`
+	Network *bool  `json:"network" yaml:"network"`
+	Auth    *bool  `json:"auth" yaml:"auth"`
+	Ready   *bool  `json:"ready" yaml:"ready"`
 }
 
 //+genclient

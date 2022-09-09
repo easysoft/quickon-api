@@ -23,7 +23,8 @@ import (
 type DbType string
 
 const (
-	DbTypeMysql = "mysql"
+	DbTypeMysql      = "mysql"
+	DbTypePostgresql = "postgresql"
 )
 
 // DbServiceSpec defines the desired state of DbService
@@ -38,10 +39,10 @@ type DbServiceStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 	Address string `json:"address,omitempty" yaml:"address,omitempty"`
-	Network bool   `json:"network" yaml:"network"`
-	Auth    bool   `json:"auth" yaml:"auth"`
-	Ready   bool   `json:"ready" yaml:"ready"`
-	Global  bool   `json:"global" yaml:"global"`
+	Network *bool  `json:"network" yaml:"network"`
+	Auth    *bool  `json:"auth" yaml:"auth"`
+	Ready   *bool  `json:"ready" yaml:"ready"`
+	Global  *bool  `json:"global" yaml:"global"`
 	ChildDB int64  `json:"child,omitempty" yaml:"child,omitempty"`
 }
 

@@ -3,8 +3,8 @@
 package qucheng
 
 import (
-	internalinterfaces "github.com/easysoft/quikon-api/client/informers/externalversions/internalinterfaces"
-	v1beta1 "github.com/easysoft/quikon-api/client/informers/externalversions/qucheng/v1beta1"
+	internalinterfaces "github.com/easysoft/quickon-api/client/informers/externalversions/internalinterfaces"
+	v1beta1 "github.com/easysoft/quickon-api/client/informers/externalversions/qucheng/v1beta1"
 )
 
 // Interface provides access to each of this group's versions.

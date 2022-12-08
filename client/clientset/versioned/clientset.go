@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net/http"
 
-	quchengv1beta1 "github.com/easysoft/quikon-api/client/clientset/versioned/typed/qucheng/v1beta1"
+	quchengv1beta1 "github.com/easysoft/quickon-api/client/clientset/versioned/typed/qucheng/v1beta1"
 	discovery "k8s.io/client-go/discovery"
 	rest "k8s.io/client-go/rest"
 	flowcontrol "k8s.io/client-go/util/flowcontrol"

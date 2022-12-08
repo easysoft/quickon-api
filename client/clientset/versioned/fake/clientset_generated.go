@@ -3,9 +3,9 @@
 package fake
 
 import (
-	clientset "github.com/easysoft/quikon-api/client/clientset/versioned"
-	quchengv1beta1 "github.com/easysoft/quikon-api/client/clientset/versioned/typed/qucheng/v1beta1"
-	fakequchengv1beta1 "github.com/easysoft/quikon-api/client/clientset/versioned/typed/qucheng/v1beta1/fake"
+	clientset "github.com/easysoft/quickon-api/client/clientset/versioned"
+	quchengv1beta1 "github.com/easysoft/quickon-api/client/clientset/versioned/typed/qucheng/v1beta1"
+	fakequchengv1beta1 "github.com/easysoft/quickon-api/client/clientset/versioned/typed/qucheng/v1beta1/fake"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"

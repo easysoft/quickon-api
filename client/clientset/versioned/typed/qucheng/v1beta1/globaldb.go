@@ -6,8 +6,8 @@ import (
 	"context"
 	"time"
 
-	scheme "github.com/easysoft/quikon-api/client/clientset/versioned/scheme"
-	v1beta1 "github.com/easysoft/quikon-api/qucheng/v1beta1"
+	scheme "github.com/easysoft/quickon-api/client/clientset/versioned/scheme"
+	v1beta1 "github.com/easysoft/quickon-api/qucheng/v1beta1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"

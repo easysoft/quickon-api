@@ -27,7 +27,8 @@ import (
 
 // DbBackupSpec defines the desired state of DbBackup
 type DbBackupSpec struct {
-	Db v1.ObjectReference `json:"db"`
+	Db                    v1.ObjectReference `json:"db"`
+	BackupStorageLocation string             `json:"backupStorageLocation,omitempty"`
 }
 
 type DbBackupPhase string

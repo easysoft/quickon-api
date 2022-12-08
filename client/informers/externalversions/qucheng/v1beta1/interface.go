@@ -18,6 +18,8 @@ type Interface interface {
 	DbRestores() DbRestoreInformer
 	// DbServices returns a DbServiceInformer.
 	DbServices() DbServiceInformer
+	// DeleteBackupRequests returns a DeleteBackupRequestInformer.
+	DeleteBackupRequests() DeleteBackupRequestInformer
 	// GlobalDBs returns a GlobalDBInformer.
 	GlobalDBs() GlobalDBInformer
 	// Restores returns a RestoreInformer.
@@ -58,6 +60,11 @@ func (v *version) DbRestores() DbRestoreInformer {
 // DbServices returns a DbServiceInformer.
 func (v *version) DbServices() DbServiceInformer {
 	return &dbServiceInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// DeleteBackupRequests returns a DeleteBackupRequestInformer.
+func (v *version) DeleteBackupRequests() DeleteBackupRequestInformer {
+	return &deleteBackupRequestInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // GlobalDBs returns a GlobalDBInformer.

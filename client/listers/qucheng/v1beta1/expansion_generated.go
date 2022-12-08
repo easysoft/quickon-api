@@ -42,6 +42,14 @@ type DbServiceListerExpansion interface{}
 // DbServiceNamespaceLister.
 type DbServiceNamespaceListerExpansion interface{}
 
+// DeleteBackupRequestListerExpansion allows custom methods to be added to
+// DeleteBackupRequestLister.
+type DeleteBackupRequestListerExpansion interface{}
+
+// DeleteBackupRequestNamespaceListerExpansion allows custom methods to be added to
+// DeleteBackupRequestNamespaceLister.
+type DeleteBackupRequestNamespaceListerExpansion interface{}
+
 // GlobalDBListerExpansion allows custom methods to be added to
 // GlobalDBLister.
 type GlobalDBListerExpansion interface{}

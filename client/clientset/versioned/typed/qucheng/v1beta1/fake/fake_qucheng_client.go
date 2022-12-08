@@ -32,6 +32,10 @@ func (c *FakeQuchengV1beta1) DbServices(namespace string) v1beta1.DbServiceInter
 	return &FakeDbServices{c, namespace}
 }
 
+func (c *FakeQuchengV1beta1) DeleteBackupRequests(namespace string) v1beta1.DeleteBackupRequestInterface {
+	return &FakeDeleteBackupRequests{c, namespace}
+}
+
 func (c *FakeQuchengV1beta1) GlobalDBs(namespace string) v1beta1.GlobalDBInterface {
 	return &FakeGlobalDBs{c, namespace}
 }

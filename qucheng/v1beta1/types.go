@@ -47,18 +47,19 @@ type GlobalDBPhase string
 
 const (
 	BackupPhaseNew           BackupPhase = "New"
-	BackupPhaseProcess       BackupPhase = "Processing"
+	BackupPhaseProcess       BackupPhase = "InProgress"
 	BackupPhaseFailed        BackupPhase = "Failed"
 	BackupPhaseExecuteFailed BackupPhase = "ExecuteFailed"
 
 	BackupPhaseUploading     BackupPhase = "Uploading"
 	BackupPhaseUploadFailure BackupPhase = "UploadFailed"
 	BackupPhaseCompleted     BackupPhase = "Completed"
+	BackupPhaseDeleting      BackupPhase = "Deleting"
 )
 
 const (
 	RestorePhaseNew           RestorePhase = "New"
-	RestorePhaseProcess       RestorePhase = "Processing"
+	RestorePhaseProcess       RestorePhase = "InProgress"
 	RestorePhaseFailed        RestorePhase = "Failed"
 	RestorePhaseExecuteFailed RestorePhase = "ExecuteFailed"
 

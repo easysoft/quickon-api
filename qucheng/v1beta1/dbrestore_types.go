@@ -26,8 +26,9 @@ import (
 
 // DbRestoreSpec defines the desired state of DbRestore
 type DbRestoreSpec struct {
-	Db   v1.ObjectReference `json:"db"`
-	Path string             `json:"path"`
+	Db                    v1.ObjectReference `json:"db"`
+	Path                  string             `json:"path"`
+	BackupStorageLocation string             `json:"backupStorageLocation,omitempty"`
 }
 
 type DbRestorePhase string

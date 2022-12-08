@@ -33,9 +33,20 @@ const (
 )
 
 type DbSpec struct {
-	DbName        string            `json:"dbName,omitempty"`
-	TargetService Service           `json:"targetService"`
-	Account       Account           `json:"account,omitempty"`
+	DbName        string  `json:"dbName,omitempty"`
+	TargetService Service `json:"targetService"`
+	Account       Account `json:"account,omitempty"`
+
+	/*
+		for postgresql:
+			restore_ignore_error_regex: ''
+			dump_format: 'c|d|t|p'  # custom(default), directory, tar, plain text
+			dump_compress_level: '0-9'
+
+		for mysql:
+			character_set: ''
+			grant_super_privilege: "true|false"
+	*/
 	Config        map[string]string `json:"config,omitempty"`
 	ReclaimPolicy *DbReclaimPolicy  `json:"reclaimPolicy,omitempty"`
 }

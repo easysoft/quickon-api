@@ -12,6 +12,8 @@ type DbRestoreExpansion interface{}
 
 type DbServiceExpansion interface{}
 
+type DeleteBackupRequestExpansion interface{}
+
 type GlobalDBExpansion interface{}
 
 type RestoreExpansion interface{}

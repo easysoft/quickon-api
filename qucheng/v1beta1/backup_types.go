@@ -28,6 +28,7 @@ type BackupSpec struct {
 	Selector    map[string]string `json:"selector"`
 	Namespace   string            `json:"namespace"`
 	StorageName string            `json:"storageName,omitempty"`
+	Helm        *HelmBackup       `json:"helm,omitempty"`
 }
 
 // BackupStatus defines the observed state of Backup
@@ -50,6 +51,13 @@ type Archive struct {
 type DbRef struct {
 	Name      string `json:"name"`
 	Namespace string `json:"namespace,omitempty"`
+}
+
+type HelmBackup struct {
+	Chart   string `json:"chart"`
+	Channel string `json:"channel"`
+	Version string `json:"version"`
+	Values  string `json:"values"`
 }
 
 //+genclient

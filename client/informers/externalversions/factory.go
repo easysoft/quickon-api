@@ -7,9 +7,9 @@ import (
 	sync "sync"
 	time "time"
 
-	versioned "github.com/easysoft/quikon-api/client/clientset/versioned"
-	internalinterfaces "github.com/easysoft/quikon-api/client/informers/externalversions/internalinterfaces"
-	qucheng "github.com/easysoft/quikon-api/client/informers/externalversions/qucheng"
+	versioned "github.com/easysoft/quickon-api/client/clientset/versioned"
+	internalinterfaces "github.com/easysoft/quickon-api/client/informers/externalversions/internalinterfaces"
+	qucheng "github.com/easysoft/quickon-api/client/informers/externalversions/qucheng"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"

@@ -5,8 +5,8 @@ package v1beta1
 import (
 	"net/http"
 
-	"github.com/easysoft/quikon-api/client/clientset/versioned/scheme"
-	v1beta1 "github.com/easysoft/quikon-api/qucheng/v1beta1"
+	"github.com/easysoft/quickon-api/client/clientset/versioned/scheme"
+	v1beta1 "github.com/easysoft/quickon-api/qucheng/v1beta1"
 	rest "k8s.io/client-go/rest"
 )
 

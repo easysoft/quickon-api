@@ -16,8 +16,6 @@ type DbServiceExpansion interface{}
 
 type DeleteBackupRequestExpansion interface{}
 
-type GlobalDBExpansion interface{}
-
 type ResticRepositoryExpansion interface{}
 
 type ResticSnapshotDumpExpansion interface{}

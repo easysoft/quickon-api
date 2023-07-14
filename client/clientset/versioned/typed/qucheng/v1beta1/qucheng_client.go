@@ -19,7 +19,6 @@ type QuchengV1beta1Interface interface {
 	DbRestoresGetter
 	DbServicesGetter
 	DeleteBackupRequestsGetter
-	GlobalDBsGetter
 	ResticRepositoriesGetter
 	ResticSnapshotDumpsGetter
 	RestoresGetter
@@ -59,10 +58,6 @@ func (c *QuchengV1beta1Client) DbServices(namespace string) DbServiceInterface {
 
 func (c *QuchengV1beta1Client) DeleteBackupRequests(namespace string) DeleteBackupRequestInterface {
 	return newDeleteBackupRequests(c, namespace)
-}
-
-func (c *QuchengV1beta1Client) GlobalDBs(namespace string) GlobalDBInterface {
-	return newGlobalDBs(c, namespace)
 }
 
 func (c *QuchengV1beta1Client) ResticRepositories(namespace string) ResticRepositoryInterface {

@@ -58,14 +58,6 @@ type DeleteBackupRequestListerExpansion interface{}
 // DeleteBackupRequestNamespaceLister.
 type DeleteBackupRequestNamespaceListerExpansion interface{}
 
-// GlobalDBListerExpansion allows custom methods to be added to
-// GlobalDBLister.
-type GlobalDBListerExpansion interface{}
-
-// GlobalDBNamespaceListerExpansion allows custom methods to be added to
-// GlobalDBNamespaceLister.
-type GlobalDBNamespaceListerExpansion interface{}
-
 // ResticRepositoryListerExpansion allows custom methods to be added to
 // ResticRepositoryLister.
 type ResticRepositoryListerExpansion interface{}

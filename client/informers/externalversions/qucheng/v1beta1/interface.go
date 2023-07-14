@@ -22,8 +22,6 @@ type Interface interface {
 	DbServices() DbServiceInformer
 	// DeleteBackupRequests returns a DeleteBackupRequestInformer.
 	DeleteBackupRequests() DeleteBackupRequestInformer
-	// GlobalDBs returns a GlobalDBInformer.
-	GlobalDBs() GlobalDBInformer
 	// ResticRepositories returns a ResticRepositoryInformer.
 	ResticRepositories() ResticRepositoryInformer
 	// ResticSnapshotDumps returns a ResticSnapshotDumpInformer.
@@ -82,11 +80,6 @@ func (v *version) DbServices() DbServiceInformer {
 // DeleteBackupRequests returns a DeleteBackupRequestInformer.
 func (v *version) DeleteBackupRequests() DeleteBackupRequestInformer {
 	return &deleteBackupRequestInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
-}
-
-// GlobalDBs returns a GlobalDBInformer.
-func (v *version) GlobalDBs() GlobalDBInformer {
-	return &globalDBInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // ResticRepositories returns a ResticRepositoryInformer.

@@ -40,10 +40,6 @@ func (c *FakeQuchengV1beta1) DeleteBackupRequests(namespace string) v1beta1.Dele
 	return &FakeDeleteBackupRequests{c, namespace}
 }
 
-func (c *FakeQuchengV1beta1) GlobalDBs(namespace string) v1beta1.GlobalDBInterface {
-	return &FakeGlobalDBs{c, namespace}
-}
-
 func (c *FakeQuchengV1beta1) ResticRepositories(namespace string) v1beta1.ResticRepositoryInterface {
 	return &FakeResticRepositories{c, namespace}
 }

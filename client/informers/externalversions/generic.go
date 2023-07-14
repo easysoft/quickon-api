@@ -51,8 +51,6 @@ func (f *sharedInformerFactory) ForResource(resource schema.GroupVersionResource
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Qucheng().V1beta1().DbServices().Informer()}, nil
 	case v1beta1.SchemeGroupVersion.WithResource("deletebackuprequests"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Qucheng().V1beta1().DeleteBackupRequests().Informer()}, nil
-	case v1beta1.SchemeGroupVersion.WithResource("globaldbs"):
-		return &genericInformer{resource: resource.GroupResource(), informer: f.Qucheng().V1beta1().GlobalDBs().Informer()}, nil
 	case v1beta1.SchemeGroupVersion.WithResource("resticrepositories"):
 		return &genericInformer{resource: resource.GroupResource(), informer: f.Qucheng().V1beta1().ResticRepositories().Informer()}, nil
 	case v1beta1.SchemeGroupVersion.WithResource("resticsnapshotdumps"):

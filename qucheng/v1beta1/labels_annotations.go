@@ -10,7 +10,16 @@ const (
 	BackupNameLabel  = "easycorp.io/backup_name"
 	RestoreNameLabel = "easycorp.io/restore_name"
 
-	ApplicationNameLabel = "easycorp.io/app_release_name"
+	ApplicationNameLabel    = "easycorp.io/app_release_name"
+	StorageProfileRoleLabel = "easycorp.io/storage_role"
+
+	PvcNameLabel = "easycorp.io/pvc_name"
+)
+
+const (
+	StorageProfileRoleVolume = "volume"
+	StorageProfileRoleDB     = "db"
+	StorageProfileRoleRemote = "remote"
 )
 
 const (
@@ -19,4 +28,5 @@ const (
 
 const (
 	PvcBackupExcludeAnnotation = "easycorp.io/pvc_backup_exclude"
+	BslRemoteDumpWeight        = "easycorp.io/remote_dump_weight"
 )

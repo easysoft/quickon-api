@@ -29,6 +29,7 @@ type DbRestoreSpec struct {
 	Db                    v1.ObjectReference `json:"db"`
 	Path                  string             `json:"path"`
 	BackupStorageLocation string             `json:"backupStorageLocation,omitempty"`
+	StorageProfileName    string             `json:"storageProfileName,omitempty"`
 }
 
 type DbRestorePhase string

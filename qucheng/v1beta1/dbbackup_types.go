@@ -29,6 +29,7 @@ import (
 type DbBackupSpec struct {
 	Db                    v1.ObjectReference `json:"db"`
 	BackupStorageLocation string             `json:"backupStorageLocation,omitempty"`
+	StorageProfileName    string             `json:"storageProfileName,omitempty"`
 }
 
 type DbBackupPhase string

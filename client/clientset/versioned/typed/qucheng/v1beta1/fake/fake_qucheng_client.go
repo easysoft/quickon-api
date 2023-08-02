@@ -16,6 +16,10 @@ func (c *FakeQuchengV1beta1) Backups(namespace string) v1beta1.BackupInterface {
 	return &FakeBackups{c, namespace}
 }
 
+func (c *FakeQuchengV1beta1) BackupSets(namespace string) v1beta1.BackupSetInterface {
+	return &FakeBackupSets{c, namespace}
+}
+
 func (c *FakeQuchengV1beta1) Dbs(namespace string) v1beta1.DbInterface {
 	return &FakeDbs{c, namespace}
 }

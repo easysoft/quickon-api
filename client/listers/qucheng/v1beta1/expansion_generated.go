@@ -10,6 +10,14 @@ type BackupListerExpansion interface{}
 // BackupNamespaceLister.
 type BackupNamespaceListerExpansion interface{}
 
+// BackupSetListerExpansion allows custom methods to be added to
+// BackupSetLister.
+type BackupSetListerExpansion interface{}
+
+// BackupSetNamespaceListerExpansion allows custom methods to be added to
+// BackupSetNamespaceLister.
+type BackupSetNamespaceListerExpansion interface{}
+
 // DbListerExpansion allows custom methods to be added to
 // DbLister.
 type DbListerExpansion interface{}

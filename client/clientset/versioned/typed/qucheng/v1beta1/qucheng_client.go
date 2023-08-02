@@ -13,6 +13,7 @@ import (
 type QuchengV1beta1Interface interface {
 	RESTClient() rest.Interface
 	BackupsGetter
+	BackupSetsGetter
 	DbsGetter
 	DbBackupsGetter
 	DbDumpReplicasGetter
@@ -34,6 +35,10 @@ type QuchengV1beta1Client struct {
 
 func (c *QuchengV1beta1Client) Backups(namespace string) BackupInterface {
 	return newBackups(c, namespace)
+}
+
+func (c *QuchengV1beta1Client) BackupSets(namespace string) BackupSetInterface {
+	return newBackupSets(c, namespace)
 }
 
 func (c *QuchengV1beta1Client) Dbs(namespace string) DbInterface {

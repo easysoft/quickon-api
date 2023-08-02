@@ -10,6 +10,8 @@ import (
 type Interface interface {
 	// Backups returns a BackupInformer.
 	Backups() BackupInformer
+	// BackupSets returns a BackupSetInformer.
+	BackupSets() BackupSetInformer
 	// Dbs returns a DbInformer.
 	Dbs() DbInformer
 	// DbBackups returns a DbBackupInformer.
@@ -50,6 +52,11 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 // Backups returns a BackupInformer.
 func (v *version) Backups() BackupInformer {
 	return &backupInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// BackupSets returns a BackupSetInformer.
+func (v *version) BackupSets() BackupSetInformer {
+	return &backupSetInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // Dbs returns a DbInformer.

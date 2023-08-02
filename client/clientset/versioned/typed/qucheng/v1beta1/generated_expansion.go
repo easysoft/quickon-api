@@ -4,6 +4,8 @@ package v1beta1
 
 type BackupExpansion interface{}
 
+type BackupSetExpansion interface{}
+
 type DbExpansion interface{}
 
 type DbBackupExpansion interface{}

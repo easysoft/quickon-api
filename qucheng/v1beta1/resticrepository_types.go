@@ -40,9 +40,11 @@ const (
 
 // ResticRepositoryStatus defines the observed state of ResticRepository
 type ResticRepositoryStatus struct {
-	Phase     ResticRepositoryPhase `json:"phase"`
-	Message   string                `json:"message,omitempty"`
-	Statistic ResticRepoStatistic   `json:"statistic,omitempty"`
+	Phase           ResticRepositoryPhase `json:"phase"`
+	Message         string                `json:"message,omitempty"`
+	Statistic       ResticRepoStatistic   `json:"statistic,omitempty"`
+	PruneTimestamp  *metav1.Time          `json:"pruneTimestamp,omitempty"`
+	UpdateTimestamp *metav1.Time          `json:"updateTimestamp,omitempty"`
 }
 
 type ResticRepoStatistic struct {

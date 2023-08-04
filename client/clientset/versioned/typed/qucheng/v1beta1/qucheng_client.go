@@ -23,6 +23,7 @@ type QuchengV1beta1Interface interface {
 	ResticRepositoriesGetter
 	ResticSnapshotDumpsGetter
 	RestoresGetter
+	RestoreSetsGetter
 	StorageProfilesGetter
 	VolumeBackupsGetter
 	VolumeRestoresGetter
@@ -75,6 +76,10 @@ func (c *QuchengV1beta1Client) ResticSnapshotDumps(namespace string) ResticSnaps
 
 func (c *QuchengV1beta1Client) Restores(namespace string) RestoreInterface {
 	return newRestores(c, namespace)
+}
+
+func (c *QuchengV1beta1Client) RestoreSets(namespace string) RestoreSetInterface {
+	return newRestoreSets(c, namespace)
 }
 
 func (c *QuchengV1beta1Client) StorageProfiles(namespace string) StorageProfileInterface {

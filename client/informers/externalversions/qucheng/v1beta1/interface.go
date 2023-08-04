@@ -30,6 +30,8 @@ type Interface interface {
 	ResticSnapshotDumps() ResticSnapshotDumpInformer
 	// Restores returns a RestoreInformer.
 	Restores() RestoreInformer
+	// RestoreSets returns a RestoreSetInformer.
+	RestoreSets() RestoreSetInformer
 	// StorageProfiles returns a StorageProfileInformer.
 	StorageProfiles() StorageProfileInformer
 	// VolumeBackups returns a VolumeBackupInformer.
@@ -102,6 +104,11 @@ func (v *version) ResticSnapshotDumps() ResticSnapshotDumpInformer {
 // Restores returns a RestoreInformer.
 func (v *version) Restores() RestoreInformer {
 	return &restoreInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// RestoreSets returns a RestoreSetInformer.
+func (v *version) RestoreSets() RestoreSetInformer {
+	return &restoreSetInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 
 // StorageProfiles returns a StorageProfileInformer.

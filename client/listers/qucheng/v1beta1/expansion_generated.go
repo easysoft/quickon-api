@@ -90,6 +90,14 @@ type RestoreListerExpansion interface{}
 // RestoreNamespaceLister.
 type RestoreNamespaceListerExpansion interface{}
 
+// RestoreSetListerExpansion allows custom methods to be added to
+// RestoreSetLister.
+type RestoreSetListerExpansion interface{}
+
+// RestoreSetNamespaceListerExpansion allows custom methods to be added to
+// RestoreSetNamespaceLister.
+type RestoreSetNamespaceListerExpansion interface{}
+
 // StorageProfileListerExpansion allows custom methods to be added to
 // StorageProfileLister.
 type StorageProfileListerExpansion interface{}

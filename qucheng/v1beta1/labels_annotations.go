@@ -10,7 +10,8 @@ const (
 	BackupNameLabel  = "easycorp.io/backup_name"
 	RestoreNameLabel = "easycorp.io/restore_name"
 
-	BackupSetNameLabel = "easycorp.io/backup_set_name"
+	BackupSetNameLabel  = "easycorp.io/backup_set_name"
+	RestoreSetNameLabel = "easycorp.io/restore_set_name"
 
 	ApplicationNameLabel    = "easycorp.io/app_release_name"
 	StorageProfileRoleLabel = "easycorp.io/storage_role"

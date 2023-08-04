@@ -56,6 +56,10 @@ func (c *FakeQuchengV1beta1) Restores(namespace string) v1beta1.RestoreInterface
 	return &FakeRestores{c, namespace}
 }
 
+func (c *FakeQuchengV1beta1) RestoreSets(namespace string) v1beta1.RestoreSetInterface {
+	return &FakeRestoreSets{c, namespace}
+}
+
 func (c *FakeQuchengV1beta1) StorageProfiles(namespace string) v1beta1.StorageProfileInterface {
 	return &FakeStorageProfiles{c, namespace}
 }

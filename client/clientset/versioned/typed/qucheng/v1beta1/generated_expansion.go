@@ -24,6 +24,8 @@ type ResticSnapshotDumpExpansion interface{}
 
 type RestoreExpansion interface{}
 
+type RestoreSetExpansion interface{}
+
 type StorageProfileExpansion interface{}
 
 type VolumeBackupExpansion interface{}

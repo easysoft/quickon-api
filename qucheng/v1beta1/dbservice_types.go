@@ -41,7 +41,6 @@ type DbServiceStatus struct {
 	Address string `json:"address,omitempty" yaml:"address,omitempty"`
 	Network *bool  `json:"network" yaml:"network"`
 	Auth    *bool  `json:"auth" yaml:"auth"`
-	Retries int    `json:"retries" yaml:"retries"`
 	Ready   *bool  `json:"ready" yaml:"ready"`
 	Global  *bool  `json:"global" yaml:"global"`
 	ChildDB int64  `json:"child,omitempty" yaml:"child,omitempty"`

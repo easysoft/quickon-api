@@ -15,8 +15,8 @@ limitations under the License.
 */
 
 // Package v1beta1 contains API Schema definitions for the qucheng v1beta1 API group
-//+kubebuilder:object:generate=true
-//+groupName=qucheng.easycorp.io
+// +kubebuilder:object:generate=true
+// +groupName=qucheng.easycorp.io
 package v1beta1
 
 import (

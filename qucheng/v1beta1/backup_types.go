@@ -54,10 +54,11 @@ type DbRef struct {
 }
 
 type HelmBackup struct {
-	Chart   string `json:"chart"`
-	Channel string `json:"channel"`
-	Version string `json:"version"`
-	Values  string `json:"values"`
+	Chart   string `json:"chart,omitempty"`
+	Channel string `json:"channel,omitempty"`
+	Version string `json:"version,omitempty"`
+	Values  string `json:"values,omitempty"`
+	Content string `json:"content,omitempty"`
 }
 
 //+genclient

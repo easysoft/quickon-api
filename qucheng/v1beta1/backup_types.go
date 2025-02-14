@@ -29,6 +29,9 @@ type BackupSpec struct {
 	Namespace   string            `json:"namespace"`
 	StorageName string            `json:"storageName,omitempty"`
 	Helm        *HelmBackup       `json:"helm,omitempty"`
+
+	// Remote define resticsnapshotdump and dbdump
+	Remote *RemoteConfig `json:"remote,omitempty"`
 }
 
 // BackupStatus defines the observed state of Backup
@@ -59,6 +62,11 @@ type HelmBackup struct {
 	Version string `json:"version,omitempty"`
 	Values  string `json:"values,omitempty"`
 	Content string `json:"content,omitempty"`
+}
+
+type RemoteConfig struct {
+	Enabled     bool   `json:"enabled,omitempty"`
+	StorageName string `json:"storageName,omitempty"`
 }
 
 //+genclient
